@@ -23,6 +23,7 @@ import org.springframework.validation.BindingResult;
 import me.dongthanh.estore.bean.MailInfo;
 import me.dongthanh.estore.dao.CustomerDAO;
 import me.dongthanh.estore.entity.Customer;
+import me.dongthanh.estore.service.CartService;
 import me.dongthanh.estore.service.CookieService;
 import me.dongthanh.estore.service.MailService;
 
@@ -46,6 +47,9 @@ public class AccountController {
 
 	@Autowired
 	HttpServletRequest request;
+	
+	@Autowired
+	CartService cart;
 
 	@GetMapping("/account/login")
 	public String login(Model model) {
@@ -104,6 +108,7 @@ public class AccountController {
 
 	@RequestMapping("/account/logout")
 	public String logout() {
+		cart.clear();
 		session.removeAttribute("user");
 		return "redirect:/home/index";
 	}
