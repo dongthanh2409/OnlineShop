@@ -14,5 +14,6 @@ A Shoping website with simple UI but functions for users/admins.
 ![image](https://user-images.githubusercontent.com/71089317/96847723-ba0fd780-147d-11eb-8220-4800d8c12d5c.png)
 
 3. DataBase Design
+
 ![image](https://user-images.githubusercontent.com/71089317/96848493-b466c180-147e-11eb-95ac-c245c7b3c04e.png)
 
